@@ -1,0 +1,338 @@
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Centre the assessment logo and add space around it. */
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.hero img {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+
+/* White background and inner spacing for the article introduction. */
+#center > div:not(.hero) {
+  background: #fff;
+  padding: 50px;
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Arrange the navigation links in a row. */
+#center > nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+#center > nav a {
+  color: #14181d;
+  text-decoration: none;
+}
+
+#center > nav a:hover {
+  text-decoration: underline;
+}
+
+/* Flow the article text into three columns on wider screens. */
+@media (min-width: 1024px) {
+  .article-columns {
+    column-count: 3;
+    column-gap: 50px;
+  }
+
+  .article-columns h2 {
+    break-after: avoid;
+  }
+}
+
+.album-gallery {
+  margin-top: 50px;
+}
+
+.album-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .album-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.small-albums {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.small-albums img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 800px;
+  margin: 50px auto 0;
+}
+
+.author > div {
+  flex: 1;
+  text-align: center;
+}
+
+.author img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .author {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.comments {
+  margin-top: 50px;
+}
+
+.comments > h2 {
+  margin-bottom: 25px;
+}
+
+.comment {
+  padding: 25px 0;
+  border-top: 1px solid #d5d5d5;
+}
+
+.comment h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.comment p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.site-footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+  background: #14181d;
+  color: #fff;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.social-icons img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Set the desktop article typography. */
+@media (min-width: 1024px) {
+  #blog > h1 {
+    font-size: 96px;
+    margin: 0 0 20px;
+  }
+
+  #blog h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .introduction {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 767px) {
+  #center {
+    padding: 0;
+  }
+
+  #center > div:not(.hero) {
+    padding: 20px;
+  }
+
+  #center > nav {
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .site-footer {
+    padding: 30px 20px;
+  }
+}
