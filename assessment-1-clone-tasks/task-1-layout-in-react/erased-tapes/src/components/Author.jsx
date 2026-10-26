@@ -1,4 +1,7 @@
 import authorPhoto from "../../../assets/profile_picture.jpg";
+import facebookIcon from "../../../assets/facebook-icon.png";
+import instagramIcon from "../../../assets/instagram-icon.svg";
+import twitterIcon from "../../../assets/twitter-icon.svg";
 
 function Author() {
   return (
@@ -18,6 +21,12 @@ function Author() {
         width="200"
         alt="Portrait of the author"
       />
+
+      <div className="author-socials">
+        <img src={facebookIcon} alt="Facebook" />
+        <img src={instagramIcon} alt="Instagram" />
+        <img src={twitterIcon} alt="X" />
+      </div>
     </section>
   );
 }

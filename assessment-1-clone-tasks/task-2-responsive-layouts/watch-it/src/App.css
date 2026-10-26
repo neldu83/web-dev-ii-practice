@@ -1,0 +1,162 @@
+/* AI assistance: ChatGPT (Codex).
+   Prompt: "Let's start Task 2" with the supplied specification and wireframes.
+   Assisted with the responsive header and movie card layouts. */
+
+/* Header with logo, genre links and search button. */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-small);
+  padding: var(--space-small);
+  background-color: var(--colour-purple);
+  box-shadow: 0 8px 0 var(--colour-turquoise);
+}
+
+.site-logo {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.genre-navigation {
+  display: none;
+  align-items: center;
+  gap: var(--space-large);
+}
+
+.genre-navigation a {
+  text-decoration: none;
+}
+
+.genre-navigation a:hover {
+  text-decoration: underline;
+}
+
+/* Shared button appearance. */
+.search-button,
+.watch-button {
+  padding: var(--space-small);
+  border: 0;
+  border-radius: var(--space-small);
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--colour-dark);
+  background-color: var(--colour-yellow);
+}
+
+.search-button:hover,
+.watch-button:hover {
+  background-color: var(--colour-turquoise);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--colour-white);
+  outline-offset: 4px;
+}
+
+/* Mobile: one column of movie cards. */
+.movie-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-large);
+  width: 100%;
+  max-width: 900px;
+  margin: var(--space-large) auto;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  font-size: 1.5em;
+  color: var(--colour-white);
+  background-color: var(--colour-purple);
+  box-shadow: 8px 8px 0 var(--colour-turquoise);
+}
+
+.movie-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.movie-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-small);
+  min-width: 0;
+  padding: var(--space-small);
+}
+
+.movie-content p {
+  margin: 0;
+}
+
+.watch-button {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Tablet: two columns with matching card heights in each row. */
+@media (min-width: 720px) {
+  .site-logo {
+    font-size: 3em;
+  }
+
+  .genre-navigation {
+    display: flex;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: calc(100% - var(--space-large) * 2);
+  }
+}
+
+/* Desktop: featured card, two upright cards, then horizontal cards. */
+@media (min-width: 1024px) {
+  .movie-card:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .movie-card:first-child .movie-image {
+    aspect-ratio: 3 / 1;
+  }
+
+  .movie-card:first-child .movie-content {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .movie-card:first-child .movie-content p {
+    flex: 1;
+  }
+
+  .movie-card:first-child .watch-button {
+    flex: 0 0 30%;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .movie-card:nth-child(n + 4) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+  }
+
+  .movie-card:nth-child(n + 4) .movie-image {
+    width: 50%;
+    align-self: stretch;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+
+  .movie-card:nth-child(n + 4) .movie-content {
+    flex: 1;
+  }
+}

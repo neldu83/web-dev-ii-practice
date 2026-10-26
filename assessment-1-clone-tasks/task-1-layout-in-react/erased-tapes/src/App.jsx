@@ -11,20 +11,28 @@ import facebookIcon from "../../assets/facebook-icon.png";
 import instagramIcon from "../../assets/instagram-icon.svg";
 import twitterIcon from "../../assets/twitter-icon.svg";
 
+// AI assistance: ChatGPT (Codex).
+// Prompt: "CAN YOU PUT SIMPLE COMMENTS" followed by "GIVE ME THE FULL CODE".
+// Added section comments and removed duplicated reader comments.
+
+// Main page component
 function App() {
   return (
     <>
       <section id="center">
+        {/* Website logo */}
         <div className="hero">
           <img src={erasedLogo} width="200" alt="Erased Tapes logo" />
         </div>
 
+        {/* Main navigation links */}
         <nav aria-label="Main navigation">
           <a href="#blog">Our Blog</a>
           <a href="#artists">Our Artists</a>
           <a href="#story">Our Story</a>
         </nav>
 
+        {/* Article title and introduction */}
         <div id="blog">
           <h1>Erased Tapes:</h1>
           <h2>Exploring the Sonic Frontier</h2>
@@ -37,6 +45,7 @@ function App() {
             fusce posuere himenaeos ipsum commodo sollicitudin himenaeos nec.
           </p>
 
+          {/* Main article text */}
           <div className="article-columns">
             <h2>Heading</h2>
 
@@ -137,6 +146,7 @@ function App() {
             </p>
           </div>
 
+          {/* Album cover gallery */}
           <div className="album-gallery">
             <img src={allEncores} alt="All Encores album cover" />
 
@@ -148,68 +158,42 @@ function App() {
             </div>
           </div>
 
+          {/* Author information */}
           <Author />
 
+          {/* Reader comments */}
           <section className="comments" aria-labelledby="comments-heading">
-                      <section className="comments" aria-labelledby="comments-heading">
             <h2 id="comments-heading">Comments</h2>
 
             <Comment username="soundseeker92">
-              This article beautifully captures the essence of experimental sound.
-              Erased Tapes is truly pushing boundaries. Makes me want to revisit
-              Nils Frahm's early work. I wonder what you think about their older stuff?
+              This article beautifully captures the essence of experimental
+              sound. Erased Tapes is truly pushing boundaries. Makes me want
+              to revisit Nils Frahm's early work. I wonder what you think
+              about their older stuff?
             </Comment>
 
             <Comment username="Ted Baker">
-              I've been following the label for years—so glad someone's finally
-              writing about their impact.
+              I've been following the label for years—so glad someone's
+              finally writing about their impact.
             </Comment>
 
             <Comment username="Queen_of_noise">
-              I discovered Erased Tapes through Ólafur Arnalds—this article brought
-              back memories and be and my friends listening together. A bit too
-              poetic for my taste, but still compelling.
+              I discovered Erased Tapes through Ólafur Arnalds—this article
+              brought back memories and be and my friends listening
+              together. A bit too poetic for my taste, but still compelling.
             </Comment>
-          </section>
-            <h2 id="comments-heading">Comments</h2>
-
-            <article className="comment">
-              <h3>soundseeker92</h3>
-              <p>
-                This article beautifully captures the essence of experimental
-                sound. Erased Tapes is truly pushing boundaries. Makes me want
-                to revisit Nils Frahm's early work. I wonder what you think
-                about their older stuff?
-              </p>
-            </article>
-
-            <article className="comment">
-              <h3>Ted Baker</h3>
-              <p>
-                I've been following the label for years—so glad someone's
-                finally writing about their impact.
-              </p>
-            </article>
-
-            <article className="comment">
-              <h3>Queen_of_noise</h3>
-              <p>
-                I discovered Erased Tapes through Ólafur Arnalds—this article
-                brought back memories and be and my friends listening
-                together. A bit too poetic for my taste, but still compelling.
-              </p>
-            </article>
           </section>
         </div>
       </section>
 
+      {/* Copyright and social media icons */}
       <footer className="site-footer">
         <p>Copyright © 2023 Erased Disks Ltd.</p>
 
         <div className="social-icons">
           <img src={facebookIcon} alt="Facebook" />
           <img src={instagramIcon} alt="Instagram" />
-          <img src={twitterIcon} alt="Twitter" />
+          <img src={twitterIcon} alt="X" />
         </div>
       </footer>
     </>
