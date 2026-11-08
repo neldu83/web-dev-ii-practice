@@ -93,7 +93,8 @@ code {
   margin-bottom: 20px;
 }
 
-@media (max-width: 1024px) {
+/* Adjust text sizes for tablet and mobile screens. */
+@media (max-width: 1023px) {
   :root {
     font-size: 16px;
   }

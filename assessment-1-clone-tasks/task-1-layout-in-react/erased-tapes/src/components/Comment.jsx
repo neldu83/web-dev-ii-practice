@@ -1,3 +1,4 @@
+// Display a reader's username and comment text.
 function Comment({ username, children }) {
   return (
     <article className="comment">

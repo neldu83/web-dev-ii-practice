@@ -1,16 +1,84 @@
-# React + Vite
+# Task 2 – watch.it
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive movie website built with React and Vite, based on the supplied specification and wireframes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- watch.it heading, genre navigation and Search button.
+- Six movie cards with images, descriptions and Watch Now buttons.
+- One-column layout on mobile.
+- Two-column layout on tablet.
+- Featured and horizontal movie cards on desktop.
+- Reusable Header and MovieCard function components.
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React and Vite
+- CSS Flexbox, Grid and media queries
+- Google Fonts: Lato and Teko
 
-## Expanding the ESLint configuration
+## Responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Mobile: below 720px.
+- Tablet: from 720px.
+- Desktop: from 1024px.
+- Main content maximum width: 900px.
+- Large spacing: 16px on mobile, 32px on tablet and 48px on desktop.
+
+## Project files
+
+- `src/App.jsx`: movie information, header and reusable movie cards.
+- `src/App.css`: header, buttons and responsive card layouts.
+- `src/index.css`: fonts, colours, global styles and spacing variables.
+
+## Run locally
+
+Open a terminal in the `watch-it` folder.
+
+Install dependencies:
+
+```powershell
+npm.cmd install
+```
+
+Start the development server:
+
+```powershell
+npm.cmd run dev
+```
+
+Open the Local URL displayed in the terminal.
+
+## Checks
+
+Build the production version:
+
+```powershell
+npm.cmd run build
+```
+
+Check the JavaScript with ESLint:
+
+```powershell
+npm.cmd run lint
+```
+
+Both commands completed successfully during testing. The layout was also reviewed in the browser at mobile, tablet and desktop widths.
+
+## Assets
+
+Movie images and descriptions come from the supplied task materials.
+
+The image imports reference the neighbouring `assets` folder. Keep that folder alongside the `watch-it` project folder.
+
+The original specification and wireframes remain in the parent task folder.
+
+## Current limitations
+
+Search and Watch Now buttons are visual elements without search or playback functionality. Genre links move to the movie section without filtering the cards.
+
+## Assistance acknowledgement
+
+ChatGPT (Codex) assisted with the React page structure, reusable movie cards, responsive CSS, explanatory comments and troubleshooting.
+
+Prompts included “Let's start Task 2” with the supplied specification, wireframes and movie text, followed by requests to review and explain the code.

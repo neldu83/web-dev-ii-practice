@@ -11,11 +11,8 @@ import facebookIcon from "../../assets/facebook-icon.png";
 import instagramIcon from "../../assets/instagram-icon.svg";
 import twitterIcon from "../../assets/twitter-icon.svg";
 
-// AI assistance: ChatGPT (Codex).
-// Prompt: "CAN YOU PUT SIMPLE COMMENTS" followed by "GIVE ME THE FULL CODE".
-// Added section comments and removed duplicated reader comments.
-
-// Main page component
+// Build the Erased Tapes page with its article, album gallery,
+// author information, reader comments and footer.
 function App() {
   return (
     <>

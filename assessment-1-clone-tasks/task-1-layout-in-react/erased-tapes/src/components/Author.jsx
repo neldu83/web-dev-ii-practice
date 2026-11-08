@@ -3,6 +3,7 @@ import facebookIcon from "../../../assets/facebook-icon.png";
 import instagramIcon from "../../../assets/instagram-icon.svg";
 import twitterIcon from "../../../assets/twitter-icon.svg";
 
+// Display the author's biography, portrait and social media icons.
 function Author() {
   return (
     <section className="author" aria-labelledby="author-heading">

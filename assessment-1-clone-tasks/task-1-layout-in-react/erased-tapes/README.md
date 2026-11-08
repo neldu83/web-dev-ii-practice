@@ -1,16 +1,73 @@
-# React + Vite
+# Task 1 – Erased Tapes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React page based on the supplied Erased Tapes design and assets.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Website logo and navigation.
+- Article introduction and text arranged into three columns on desktop.
+- Album gallery with one large image and four smaller images.
+- Author biography, portrait and social media icons.
+- Three reader comments.
+- Footer with copyright information and social media icons.
+- Layout adjustments for smaller screens.
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React and Vite
+- CSS Flexbox, Grid and media queries
+- Google Fonts: Josefin Sans and Protest Guerrilla
 
-## Expanding the ESLint configuration
+## Components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `App.jsx`: page layout and article content.
+- `Author.jsx`: author biography, portrait and icons.
+- `Comment.jsx`: reusable reader comment.
+
+## Run locally
+
+Open a terminal in the `erased-tapes` folder.
+
+Install dependencies:
+
+```powershell
+npm.cmd install
+```
+
+Start the development server:
+
+```powershell
+npm.cmd run dev
+```
+
+Open the Local URL displayed in the terminal.
+
+## Checks
+
+Build the production version:
+
+```powershell
+npm.cmd run build
+```
+
+Check the JavaScript with ESLint:
+
+```powershell
+npm.cmd run lint
+```
+
+Both commands completed successfully during testing.
+
+## Assets
+
+Images, icons and article text come from the supplied task materials. Image imports reference the neighbouring `assets` folder, which must remain alongside the project folder.
+
+## Current limitations
+
+The Our Artists and Our Story navigation links have no matching sections. Social media icons are displayed as images without clickable links.
+
+## Assistance acknowledgement
+
+ChatGPT (Codex) assisted with code suggestions, layout development, reusable components, explanatory comments and troubleshooting.
+
+Prompts included “CAN YOU PUT SIMPLE COMMENTS” and “GIVE ME THE FULL CODE”, alongside follow-up requests to review and explain the implementation.
