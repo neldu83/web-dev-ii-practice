@@ -1,7 +1,3 @@
-/* AI assistance: ChatGPT (Codex).
-   Prompt: "Let's start Task 2" with the supplied specification and wireframes.
-   Assisted with the responsive header and movie card layouts. */
-
 /* Header with logo, genre links and search button. */
 .site-header {
   display: flex;
