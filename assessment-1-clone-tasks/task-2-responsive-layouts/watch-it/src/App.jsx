@@ -6,10 +6,7 @@ import hiddenFigures from "../../assets/hidden-figures.jpg";
 import palmSprings from "../../assets/palm-springs.jpg";
 import barbie from "../../assets/barbie.jpg";
 
-// AI assistance: ChatGPT (Codex).
-// Prompt: "Let's start Task 2" with the supplied specification and movie text.
-// Assisted with the React page structure and reusable movie cards.
-
+// Store the movie titles, images and descriptions used by the movie cards.
 // Movie information supplied in the assessment assets.
 const movies = [
   {
